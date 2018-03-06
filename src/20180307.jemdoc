@@ -9,7 +9,7 @@
 == 作业选讲
 
 22. 设函数 $f(x)\in C(-\infty,+\infty)$, 且 $f'(0)$ 存在, 再设对于
-$\forall x\in(-\infty,+\infty),\int_0^xf(t)\mathrm{d}=\frac{1}{2}xf(x)$.
+$\forall x\in(-\infty,+\infty),\int_0^xf(t)\mathrm{d}t=\frac{1}{2}xf(x)$.
 证明: $f(x)\equiv cx$,其中$c\in\mathrm{R}$为常数.
 
 23. 设$P_n(x)$为$n\geq1$次多项式, $[a,b]$是任一闭区间. 证明:
@@ -17,11 +17,11 @@ $\forall x\in(-\infty,+\infty),\int_0^xf(t)\mathrm{d}=\frac{1}{2}xf(x)$.
 
 25. 求下列极限:
 \(
-(2)\lim_{x\to0+0}\frac{\int_0^x(\sin t)^\alpha\mathrm{d}}{x^{1+\alpha}};
-(3)\lim_{x\to\infty}\frac{\int_0^xe^{t^2}\mathrm{d}t}{x^{1-\alpha}e^{x^\alpha}}(\alpha>0).
+(2)\lim_{x\to0+0}\frac{\int_0^x(\sin t)^\alpha\mathrm{d}t}{x^{1+\alpha}};
+(3)\lim_{x\to\infty}\frac{\int_0^xe^{t^\alpha}\mathrm{d}t}{x^{1-\alpha}e^{x^\alpha}}(\alpha>0).
 \)
 
-37. (Riemann定理)设函数$f(x)$在区间$[a,b]$上单调, $g(x)$是$(-\infty,+\infty)$上以$T>0$为周期
+37. (Riemann定理, 作业37题加强版)设函数$f(x)$在区间$[a,b]$上可积, $g(x)$是$(-\infty,+\infty)$上以$T>0$为周期
 的连续函数, 且$\int_0^Tg(x)\mathrm{d}x=0$. 证明:
 \(
 \lim_{\lambda\to\infty}\int_a^bf(x)g(\lambda x)\mathrm{d}x=0
@@ -51,7 +51,7 @@ $\forall x\in(-\infty,+\infty),\int_0^xf(t)\mathrm{d}=\frac{1}{2}xf(x)$.
     \(
     I(x)=\int_a^bf(t)e^{x\phi(t)}\mathrm{d}t
     \)
-为了简化讨论, 我们这里假设$f,\phi$具有无穷阶导数, 且$\phi'$在$(a,b)$上大于0.
+为了简化讨论, 我们这里假设$f,\phi$具有无穷阶导数, 且$\phi'$在$(a,b)$上大于0, $f(b)>0$.
 请描述上述积分$I$随着$x\to\infty$的渐近行为. 
 
 === 常微分方程
@@ -89,3 +89,5 @@ $|f(x,y_1)-f(x,y_2)|<L|y_1-y_2|, \forall (x,y_1),(x,y_2)\in R$.
 作业22从常微分方程的角度来看, 即是让我们证明上述微分方程的解的存在唯一性.
 当然, 这里我们并不能直接使用皮卡定理, 因为我们还没有考虑关于$f,x$的函数
 $G(f,x)$的连续性等问题. 
+
+[solutions/20180307/20180307.pdf solutions]

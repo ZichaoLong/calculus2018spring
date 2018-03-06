@@ -38,4 +38,4 @@ f(x)=\left\{\begin{array}{ll}
 $\int_0^\pi f(x)sin(x)\mathrm{d}x=\int_0^\pi f(x)cos(x)\mathrm{d}x=0$. 证明: 
 $\forall \alpha \in \mathrm{R}, \exists \xi \in (0,\pi), $ s.t. $ f'(\xi)-\alpha f(\xi)=0$.
 
-[solutions//20180228/20180228.pdf solutions]
+[solutions/20180228/20180228.pdf solutions]
