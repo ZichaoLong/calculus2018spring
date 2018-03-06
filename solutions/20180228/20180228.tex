@@ -15,20 +15,11 @@
 \renewcommand{\algorithmicensure}{\textbf{输出}}
 \floatname{algorithm}{子程序}
 \listfiles
-\input{initialset.tex}
+\input{../initialset.tex}
 \linespread{1.5}
 \author{龙子超}
 \title{{\heiti {\zihao{3} 数学分析II-习题课}}}
 \date{}
-\theoremstyle{nonumberplain}
-\theoremheaderfont{\itshape}
-\theorembodyfont{\upshape}
-%\theoremseparator{.}
-%\theoremsymbol{\ensuremath{\square}
-\newtheorem{definition}{定义}
-\newtheorem{theorem}{定理}
-\newtheorem{lemma}{引理}
-%\newtheorem{proof}{证明}
 \begin{document}
 \maketitle
 %===================正文====================
@@ -117,7 +108,7 @@ $f(x)=a_0+a_1x+\cdots+a_nx^n+o(x^n),x\to 0,n\geq1$.
 \noindent \textbf{8.} 设 $f(x)$ 是 $R$ 上的可微非常值函数且满足 $\forall x\in R, f(f(x))=f(x)$. 
 问: $f(x)\equiv x$ 是否成立?
 \begin{proof}[证明(by 陈代超)]
-  注意到, 对某个 $y\in \mr$, 若存在 $x\in mr$满足$f(x)=y$, 
+  注意到, 对某个 $y\in \mr$, 若存在 $x\in \mr$满足$f(x)=y$, 
 则有$f(y)=f(f(x))=f(x)=y$. 因此, $f$的值域中的点都是满足条件的点.
 
 我们只需要证明$f$的值域是$R$.
