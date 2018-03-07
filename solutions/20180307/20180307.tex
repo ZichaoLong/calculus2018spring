@@ -116,7 +116,7 @@ $\forall x\in(-\infty,+\infty),\int_0^xf(t)\mathrm{d}t=\frac{1}{2}xf(x)$.
   由于$f$单调, 故
   \begin{eqnarray*}
     \int_a^bf(x)g(\lambda x)\ud x&=&f(a)\int_a^\xi g(\lambda x)\ud x+f(b)\int_\xi^b g(\lambda x)\ud x\\
-    &=&f(a)\int_{\xi'}^\xi g(\lambda x)\ud x+f(b)\int_{\xi}^{\xi'+\frac{T}{\lambda}}g(\lambda x)\ud x\\
+    &=&f(a)\int_{\xi'}^\xi g(\lambda x)\ud x+f(b)\int_{\xi}^{\xi'+\frac{T}{\lambda}}g(\lambda x)\ud x+f(b)\int_{\xi''}^bg(\lambda x)\ud x\\
     &=&\to0 (\text{ as } \frac{T}{\lambda}\to0).
   \end{eqnarray*}
 \end{proof}
@@ -165,8 +165,16 @@ $\forall x\in(-\infty,+\infty),\int_0^xf(t)\mathrm{d}t=\frac{1}{2}xf(x)$.
 \noindent 2. 设$f\in\mathrm{R}[a-\delta,b+\delta]$, 其中$\delta>0$, 则有
   \[\lim_{h\to0}\int_a^b|f(x+h)-f(x)|\mathrm{d}x=0\]
   \begin{proof}[提示]
-    使用上面1的结论, 用连续函数$g$逼近$f$, 
-    再由$g$的一致连续性得到结论.
+    注意到, 对于任何在$[a-\delta,b+\delta]$上可积的函数$g$,
+    \[\int_a^b|f(x+h)-f(x)|\ud x\leq \int_a^b(|f(x+h)-g(x+h)|+|f(x)-g(x)|+|g(x+h)-g(x)|)\ud x\]
+    \begin{itemize}
+      \item 使用上面1的结论, 用阶梯函数$g$逼近$f$, 
+        再想办法证明, 对于给定阶梯函数
+        \[\int_a^b |g(x+h)-g(x)|\ud x\to0,h\to0\]
+      \item 或者使用上面1的结论, 用连续函数$g$逼近$f$, 
+        再由$g$的一致连续性得到.
+        \[\int_a^b |g(x+h)-g(x)|\ud x\to0,h\to0\]
+    \end{itemize}
   \end{proof}
 
 
