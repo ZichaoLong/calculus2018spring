@@ -1,0 +1,33 @@
+# jemdoc: menu{MENU}{index.html},nofooter
+= 2018-Mar-14
+
+== 微元法&习题
+
+1. 考虑正连续函数 $y=f(x),x\in[a,b]$ 的定积分 $S=\int_a^b f(x)\mathrm{d}x$. 则$S$是$\mathrm{R}^2$中的曲线 $y=f(x)$, $x$ 轴以及两条直线$x=a,x=b$所围成的区域的面积.
+
+2. 假定空间$\mathrm{R}^3$中某立体$\Omega$介于平面$x=a,x=b$之间, 设$x=x_0$这一平面截$\Omega$所得到的截面积记作$A(x_0)$. 若$A(x_0),x_0\in[a,b]$是连续函数, 则$V=\int_a^bA(x)\mathrm{d}x$是$\Omega$的体积.
+
+3. 曲线长: 设$\Gamma:x=x(t),y=y(t),t\in[a,b]$是$\mathrm{R}^2$中的一条曲线, 如果它满足$x'(t),y'(t)$在$[a,b]$上存在且连续, 并且$x'(t)^2+y'(t)^2>0$, 则成$\Gamma$是一条光滑曲线. 且其曲线长度为$L=\int_a^b\sqrt{x'(t)^2+y'(t)^2}\mathrm{d}t$.
+
+4. 旋转体侧面积: 设$\mathrm{R}^2$中$\Gamma:x=x(t),y=y(t),t\in[a,b]$是一条光滑曲线, 在$\mathrm{R}^3$中将$\Gamma$绕$x$轴旋转一周之后与$x=x(a),x=x(b)$两个平面围成一个旋转体$\Omega$, 则$\Omega$的侧面积为$S=2\pi\int_a^by(t)\sqrt{x'(t)^2+y'(t)^2}\mathrm{d}t$. 如果在某一段发生了$x'(t)=0$的情形怎么办?微元法怎么解释?
+
+上面1,2可以比较严格的将微元法转换成定积分来说明, 3,4呢?
+
+5. 求$\mathrm{R}^2$中两条曲线$y^2=x,x^2+y^2=1$所围成的区域的面积.
+
+6. 椭圆的渐屈线$x=\frac{c^2}{a}\cos^3t,y=\frac{c^2}{b}\sin^3t,c=a^2-b^2>0$. 求这一曲线围成的平面图形的面积.
+
+7. 三叶线$r=a\sin3\theta$. 求这一曲线围成的平面图形的面积.
+
+8. 曲面$z=\frac{x^2}{a^2}+\frac{y^2}{b^2}$与平面$z=h$所围成的立体的体积.
+
+9. 证明: 极坐标下曲线$r=r(\theta)$与$\theta=\alpha,\theta=\beta$(这里$0\leq\alpha<\beta\leq\pi$)所围成的平面图形绕极轴(即直线$\theta=0,\pi$)旋转一周所得立体的体积是
+\(
+V=\frac{2\pi}{3}\int_\alpha^\beta r^3(\theta)\sin\theta\mathrm{d}\theta
+\)
+侧面积呢?
+
+10. 求球体$x^2+y^2+z^2\leq1$和柱体$(x-\frac{1}{2})^2+y^2\leq \frac{1}{4}$公共部分的体积.
+
+11. (第七章33(1))利用定积分第二中值定理证明: $|\int_a^b\frac{\sin x}{x}\mathrm{d}x|<\frac{2}{a}$, 其中$0<a<b$.注意说明等号为何不成立.
+

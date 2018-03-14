@@ -1,5 +1,5 @@
 .PHONY : pages update clean
-DOCS=index 20180228 20180307
+DOCS=index 20180228 20180307 20180314
 UTILS=../utils/
 PREFIX=../
 
