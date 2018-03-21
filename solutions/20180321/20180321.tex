@@ -1,0 +1,224 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+%
+%
+\documentclass[a4paper,12pt]{article}
+\usepackage{ctex}
+\usepackage{geometry,anysize,changepage,calc,hyperref,cite,fancyhdr,setspace}
+\usepackage{amsmath,amssymb,amsthm,listings,xcolor}
+\usepackage{graphicx,wrapfig,multirow,diagbox,caption, subcaption,verbatim}
+\usepackage{caption,algorithm,algpseudocode}
+\usepackage{url,natbib}
+\bibliographystyle{abbrvnat}
+\setcitestyle{open={(},authoryear,close={)}}
+\renewcommand{\algorithmicrequire}{\textbf{输入}}
+\renewcommand{\algorithmicensure}{\textbf{输出}}
+\floatname{algorithm}{子程序}
+\listfiles
+\input{../initialset.tex}
+\linespread{1.5}
+\author{龙子超}
+\title{{\heiti {\zihao{3} 数学分析II-习题课}}}
+\date{}
+\begin{document}
+\maketitle
+%===================正文====================
+%\begin{abstract}
+%\begin{spacing}{1.0}
+%
+%\end{spacing}
+%\end{abstract}
+
+%\tableofcontents
+%\newpage
+
+本习题答案集所给出的解答尽可能从教材出发. 课程教材为《数学分析》I-III, 伍胜健编著,
+北京大学出版社.
+\section*{2018-Mar-21}
+\noindent 8. 证明$\mathrm{R}^n$中的闭集可表为可列个开集的交, 每个开集可表为可列个闭集的并.
+\begin{proof}
+  首先, 假如$E\subset\mr^n$是闭集, 那么对$\forall\delta>0$,
+  我们可以定义$F_\delta=\cup_{e\in E}U(e,\delta)$,此时根据$F_\delta$的定义有$E\subset F_\delta$.
+  从而$E\subset\bigcap_{n=1}^{\infty}F_{\frac{1}{n}}$
+  
+  那么这个$\bigcap F_{\frac{1}{n}}$会不会就是$E$呢?
+
+  答案是是. 事实上, 对任意的$r\notin E$, 由于$E$是闭集, 故$\delta=d(r,E)>0$, 
+  故存在$n\in\mn$使得$\frac{1}{n}<\delta$, 从而对任意的$e\in E$,$r\notin U(e,\frac{1}{n})$,
+  因此$r\notin F_{\frac{1}{n}}=\cup_{e\in E}U(e,\frac{1}{n})$.
+
+  因此$E=\bigcap_{n=1}^{\infty}F_{\frac{1}{n}}$, 闭集$E$是可数个开集$\{F_{1/n}\}$
+  的交.
+
+  另一方面, 若$E$是开集, 则$E^c$是闭集, 根据刚才证明的结论, 
+  存在可数个开集$\{F_i\}_{i\in I}$, 使得$E^c=\bigcap_{i\in I}F_i$, 
+  于是$E=\bigcup_{i\in I}F_i^c$是可数个闭集的并.
+
+  证毕.
+\end{proof}
+
+\noindent 9. ($\mathrm{R}^n$的正规性)设$S_1,S_2$为$\mathrm{R}^n$中不相交的闭集(不一定有界). 证明存在开集$O_1,O_2$满足$S_i\subset O_i,i=1,2$,且$O_1\cap O_2=\emptyset$
+\begin{proof}
+  取
+  \[O_1=\bigcup_{e_1\in S_1}U(e_1,\frac{1}{3}d(e_1,S_2)),O_2=\bigcup_{e_2\in S_2}U(e_2,\frac{1}{3}d(e_2,S_1))\]
+  容易验证$O_1,O_2$是各自包含$S_1,S_2$的开集. 下面我们证明这个$O_1,O_2$符合题目的要求.
+
+  事实上, 若$O_1,O_2$的交非空, 假设$a\in O_1\cap O_2$, 那么由$O_1,O_2$的定义, 
+  必存在$s_1\in S_1,s_2\in S_2$使得,
+  \[a\in U(s_1,\frac{1}{3}d(s_1,S_2),a\in U(s_2,\frac{1}{3}d(s_2,S_1))\]
+
+  因此$|s_1-s_2|\leq|s_1-a|+|s_2-a|\leq\frac{1}{3}(d(s_1,S_2)+d(s_2,S_1))\leq\frac{1}{3}(|s_1-s_2|+|s_1-s_2|)<|s_1-s_2|$, 
+  矛盾.
+
+  故$O_1,O_2$满足题设要求.证毕.
+\end{proof}
+
+第8,9题在点集拓扑中都属于比较常见直观的问题.
+
+\noindent 10. 设$f_1,\cdots,f_n$是$[0,1]$上的$n$个连续函数,称$f_1,\cdots,f_n$在$[0,1]$上是*线性相关*,若存在不全为零的常数$c_1,\cdots,c_n$,使得
+\[\sum_{i=1}^{n}c_if_i(x)\equiv0,x\in[0,1].\]
+    证明:$f_1,\cdots,f_n$在$[0,1]$上线性相关的充要条件是
+    \[\det\left((\int_0^1f_i(x)f_j(x)\mathrm{d}x)_{n\times n}\right)=0\]
+\begin{proof}
+  注意到, 对于$\mr^{n\times n}$上的矩阵$A$, $A$的行列式为$0$等价于存在一组不全为$0$的系数$\{c_i\}_{i=1}^n$, 满足
+  \[\sum_{i=1}^nc_iA_{ij}=0,\forall j=1,\cdots,n\]
+
+  回到原题, 记$A=\left((\int_0^1f_i(x)f_j(x)\mathrm{d}x)_{n\times n}\right)$,
+  那么, 当$\{f_i\}_{i=1}^n$线性相关时, 即存在一组非零系数$\{c_i\}_{i=1}^n$满足$\sum_{i=1}^n c_if_i(x)\equiv 0$时,
+  对任意的$j=1,\cdots,n$,有
+  \[\sum_{i=1}^nc_iA_{ij}=\sum_{i=1}^nc_i\int_0^1f_i(x)f_j(x)\ud x=\int_0^1\big(\sum_{i=1}^nc_if_i(x)\big)f_j(x)\ud x=0,\]
+  从而$det(A)=0$
+
+  另一方面, 若$det(A)=0$, 那么存在$\{c_i\}_{i=1}^n$满足$\sum_{i=1}^nc_iA_{ij}=0,\forall j=1,\cdots,n$,
+  记向量$c=(c_1,\cdots,c_n)$, 则
+  \[cAc^T=\sum_{ij}c_ic_jA_{ij}=\int_0^1\sum_{ij}[c_if_i(x)][c_jf_j(x)]\ud x=\int_0^1\big(\sum_{i=1}^nc_if_i(x)\big)^2\ud x\]
+  因此$\sum_{i=1}^nc_if_i(x)\equiv0$, 即$\{f_i\}_{i=1}^n$线性相关.
+\end{proof}
+
+\noindent 11.
+\begin{enumerate}
+  \item 设$\mathcal{T}$是$\mathrm{R}^n$到$\mathrm{R}^n$的一个映射,如果存在常数$\theta\in(0,1)$以及自然数$n_0$使得\(|\mathcal{T}^{n_0}x-\mathcal{T}^{n_0}|\leq\theta|\mathrm{x}-\mathrm{y}|,\forall \mathrm{x},\mathrm{y}\in\mathrm{R}^n\)其中$\mathcal{T}^{n_0}$表示$\mathcal{T}$复合$n_0$次.证明: 映射$\mathcal{T}$有唯一的不动点,即,存在唯一的$\mathrm{x}_0\in\mathrm{R}^n$使得$\mathcal{T}\mathrm{x}_0=\mathrm{x}_0$
+  \item 设$\Omega$是$\mathrm{R}$中的有界闭集,$\mathrm{f}$是$\Omega$到$\Omega$的一个映射, 满足\(|f(\mathrm{x})-f(\mathrm{y})|<|\mathrm{x}-\mathrm{y}|,\forall \mathrm{x}\neq\mathrm{y}\in\Omega.\)证明:$f$在$\Omega$中存在唯一的不动点. 另外,能否把有界闭集的假设减弱为一般的有界集或无界闭集?
+\end{enumerate}
+\begin{proof}\ 
+  \begin{enumerate}
+    \item 记$\mathcal{S}=\mathcal{T}^{n_0}$, 任取一个$x\in\mr^n$, 考虑序列$x,\mathcal{S}x,\mathcal{S}^2x,\cdots,\mathcal{S}^mx,\cdots$. 
+      我们先证明$\{\mathcal{S}^ix\}_{i=0}^\infty$将收敛到一个点$x_0\in\mr^n$. 事实上, 对给定的$N\in\mn$, 
+      \[|\mathcal{S}^{N+1}x-\mathcal{S}^Nx|=|\mathcal{S}(\mathcal{S}^Nx)-\mathcal{S}(\mathcal{S}^{N-1}x)|\leq\theta|\mathcal{S}^Nx-\mathcal{S}^{N-1}x|\cdots\leq\theta^N|\mathcal{S}x-x|\]
+      因此对任意两个自然数$l<m$,
+      \[|\mathcal{S}^lx-\mathcal{S}^mx|\leq\sum_{i=l}^{m-1}|\mathcal{S}^{i+1}x-\mathcal{S}^ix|\leq\sum_{i=l}^{m-1}\theta^i|\mathcal{S}x-x|=\theta^l\frac{1-\theta^{m-l}}{1-\theta}|\mathcal{S}x-x|<\theta^n\frac{1}{1-\theta}|\mathcal{S}x-x|\]
+      因此$\{\mathcal{S}^ix\}_{i=1}^\infty$是柯西列, 从而收敛到$\mr^n$中的一个点$x_0$.
+
+      那么$\mathcal{S}x_0=x_0$, 这是因为$|\mathcal{S}x_0-\mathcal{S}(\mathcal{S}^Nx)|\leq\theta|x_0-\mathcal{S}^Nx|$, 由于$\mathcal{S}(\mathcal{S}^Nx)=\mathcal{S}^{N+1}x$和$\mathcal{S}^Nx$都将收敛到$x_0$, 因此
+      $\mathcal{S}x_0$只能等于$x_0$.
+
+      我们还需要证明$x_0$也是$\mathcal{T}$的不动点. 
+      由上面$\mathcal{S}x_0=x_0$, 即$\mathcal{T}^Nx_0=x_0$, 
+      可得$\mathcal{T}^{n_0}(Tx_0)=\mathcal{T}(\mathcal{T}^{n_0}x_0)=\mathcal{T}x_0$, 
+      而若$\mathcal{T}x_0\neq x_0$, 则依题设有
+      \[|\mathcal{T}x_0-x_0|=|\mathcal{T}^{n_0}(Tx)-\mathcal{T}^{n_0}x|\leq \theta|\mathcal{T}x_0-x_0|\]
+      这与$\theta<1,|\mathcal{T}x_0-x_0|>0$矛盾. 因此$\mathcal{T}x_0=x_0$, 即$x_0$是$\mathcal{T}$的不动点.
+
+      证毕.
+    \item 假设$f$没有不动点, 考虑$d=\inf_{x\in\Omega}|f(x)-x|$. 于是存在一列$\{x_n\}_{n=1}^\infty$满足
+      $|f(x_n)-x_n|\to d$, 由于$\Omega$是有界闭集, 因此$\{x_n\}_n$在$\Omega$有聚点, 记作$x_0$,
+      依题设, $|f(x_n)-f(x_0)|<|x_n-x_0|\to0$, 从而$f(x_n)\to f(x_0)$, 因此
+      \[|f(x_0)-x_0|=\lim_{n\to\infty}|f(x_n)-x_n|=d\]
+      但$|f(f(x_0))-f(x_0)|<|f(x_0)-x_0|=d$, 这与$d$是$\{|f(x)-x|:x\in\Omega\}$的下确界矛盾.
+
+      因此$f$有不动点. 若$f$有两个不动点$x,y$,则$x-y=f(x)-f(y)$这与$|f(x)-f(y)|<|x-y|$矛盾.
+
+      若将题目条件中的$\Omega$有界闭改成无界闭或有界开集则结论不一定成立.
+      \begin{itemize}
+        \item $\Omega=[1,\infty)$为无界闭集, $f(x)=x+\frac{1}{x}$, 则$|f(x)-f(y)|=|x-y|(1-\frac{1}{xy})<|x-y|$, 且$f(x)=x$在$[1,\infty)$上不可能成立.
+        \item $\Omega=(0,1)$为有界开集, $f(x)=x-x^2$满足题设条件, 但是在这一区间上没有不动点.
+      \end{itemize}
+  \end{enumerate}
+\end{proof}
+
+
+
+
+
+
+
+%\begin{algorithm}
+%  \caption*{ADMM求解$\min_{X\succeq0}|X|_1,\st |SX-I|\leq\sigma$}
+%  %  \caption{ADMM求解$\min_{X\succeq0}|X|_1,\st |SX-I|\leq\sigma$}\label{alg:ADMM}
+%  \begin{algorithmic}
+%    \Require $S,\sigma,\rho$
+%    \Ensure $X,|X|_1$
+%    \State \textbf{Repeat while not convergence}
+%    \begin{enumerate}
+%      \item  根据式(\ref{eq:updateW3_2}
+%      $\sim$\ref{eq:updateZ3_2}),依次求$W^+,X^+,Y^+,Z^+$;
+%      \item  根据式(\ref{eq:updateU3_2}),依次求${U^1}^+,{U^2}^+,{U^3}^+$;
+%    \end{enumerate}
+%    \Return $X,|X|_1$
+%  \end{algorithmic}
+%\end{algorithm}
+
+%\begin{lstlisting}[language=Matlab,keywordstyle=\color{blue},commentstyle=\color{red!80!green!80!blue!80}, rulesepcolor=\color{red!50!green!50!blue!50},tabsize=4]
+%
+%\end{lstlisting}
+
+%\begin{figure}[htbp!]
+%\centering
+%\makebox[\textwidth][c] {
+%\includegraphics[width=0.9\paperwidth]{}
+%}
+%\caption{}\label{}
+%\end{figure}
+%
+%\begin{figure}[htbp!]
+%   \centering
+%   \begin{subfigure}{.48\textwidth}
+%	\centering
+%	\includegraphics[width = \textwidth]{}
+%	\caption{} \label{}
+%   \end{subfigure} 
+%   \begin{subfigure}{.48\textwidth}
+%	\centering
+%	\includegraphics[width = \textwidth]{}
+%	\caption{} \label{}
+%   \end{subfigure}
+%   \caption{} \label{}
+%\end{figure}
+
+%\begin{table}[htbp!]
+%\centering
+%\caption{} 
+%\begin{subfigure}{0.49\textwidth}
+%   \centering
+%   \caption{}
+%   \begin{tabular}{}
+%
+%   \end{tabular}
+%\end{subfigure}
+%\begin{subfigure}{.49\textwidth}
+%   \centering
+%   \caption{} 
+%   \begin{tabular}{}
+%
+%   \end{tabular}    
+%\end{subfigure}
+%\end{table}
+
+%\begin{centering}
+%\section*{致谢}\addcontentsline{toc}{section}{致谢}
+%\end{centering}
+
+%\newpage
+%\begin{thebibliography}{}
+%\addcontentsline{toc}{section}{参考文献}
+%\bibitem{cite_ADMM}Boyd S, Parikh N, Chu E, et al. Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers[J]. Foundations \& Trends® in Machine Learning, 2011, 3(1):1-122.
+%\bibitem{cite_FISTA}Beck A, Teboulle M. A Fast Iterative Shrinkage-Thresholding Algorithm for Linear Inverse Problems[J]. Siam Journal on Imaging Sciences, 2009, 2(1):183-202.
+%\bibitem{cite_convexoptimization}Boyd S, Vandenberghe L. Convex Optimization[M]. Cambridge University Press, 2004.
+%%\bibitem{cite_quasicrystalsgreen}刘有延,傅秀军.\emph{准晶体}[M]. 上海科技教育出版社,1999.
+%\end{thebibliography}
+
+\bibliography{ref}
+\end{document}
+
+
+
