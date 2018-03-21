@@ -31,3 +31,4 @@ V=\frac{2\pi}{3}\int_\alpha^\beta r^3(\theta)\sin\theta\mathrm{d}\theta
 
 11. (第七章33(1))利用定积分第二中值定理证明: $|\int_a^b\frac{\sin x}{x}\mathrm{d}x|<\frac{2}{a}$, 其中$0<a<b$.注意说明等号为何不成立.
 
+[solutions/20180314/20180314.pdf solutions]
