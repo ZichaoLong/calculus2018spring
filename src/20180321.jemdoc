@@ -2,30 +2,30 @@
 = 2018-Mar-21
 
 == 作业
-1. 设$E\subset\mathrm{R}^n$, 证明:(1)$E'$是闭集;(2)$\partial E$是闭集.
+III Chap13 8. 设$E\subset\mathrm{R}^n$, 证明:(1)$E'$是闭集;(2)$\partial E$是闭集.
 
-2. 设$E\subset\mathrm{R}^2$, 记$E_1=\{x\in\mathrm{R}:\exists(x,y)\in E\},E_2=\{y\in\mathrm{R}:\exists(x,y)\in E\}$, 判断下面的命题是否为真:
+III Chap13 9. 设$E\subset\mathrm{R}^2$, 记$E_1=\{x\in\mathrm{R}:\exists(x,y)\in E\},E_2=\{y\in\mathrm{R}:\exists(x,y)\in E\}$, 判断下面的命题是否为真:
     . $E$为$\mathrm{R}^2$中的开(闭)集时, $E_1,E_2$均为$R$中的开(闭)集.
     . $E_1,E_2$均为$\mathrm{R}$中的开(闭)集时,$E$为$\mathrm{R}^2$中的开(闭)集.
 
-3. 构造$\mathrm{R}^2$中单位圆盘$\Delta=\{(x,y):x^2+y^2<1\}$内的一个点列$\{(x_k,y_k)\}$,使得它的点构成的集合的聚点恰为单位圆周.
+III Chap13 10. 构造$\mathrm{R}^2$中单位圆盘$\Delta=\{(x,y):x^2+y^2<1\}$内的一个点列$\{(x_k,y_k)\}$,使得它的点构成的集合的聚点恰为单位圆周.
 
-4. 设$E_1,E_2\subset\mathrm{R}^n$为两个非空集合, 定义$E_1,E_2$间的距离如下:
+III Chap13 11. 设$E_1,E_2\subset\mathrm{R}^n$为两个非空集合, 定义$E_1,E_2$间的距离如下:
 \(d(E_1,E_2)=\inf_{\mathrm{x}\in E_1,\mathrm{y}\in E_2}|\mathrm{x}-\mathrm{y}|\)
     . 举例说明存在开集$E_1,E_2$,使得$E_1\cap E_2=\emptyset$,但$d(E_1,E_2)=0$
     . 举例说明存在闭集$E_1,E_2$,使得$E_1\cap E_2=\emptyset$,但$d(E_1,E_2)=0$
     . 证明: 若紧集$E_1,E_2$满足$d(E_1,E_2)=0$, 则必有$E_1\cap E_2\neq\emptyset$
 
-5. 求极限或证明极限不存在
+III Chap13 14. 求极限或证明极限不存在
    . $\lim_{E\owns(x,y)\to(0,0)}\frac{\sin(x^3+y^3)}{x^2+y}$,其中 $E=\{(x,y):y>x^2\}$
    . $\lim_{|(x,y)|\to\infty}(x^2+y^2)e^{-(|x|+|y|)}$
    . $\lim_{(x,y,z)\to(0,0,0)}\left(\frac{xyz}{x+y+z}\right)^{x+y}$
    . $\lim_{(x,y,z)\to(0,1,0)}\frac{\sin(xyz)}{x^2+z^2}$
    . $\lim_{\mathrm{x}\to0}\frac{(\sum_{i=1}^{n}x_i)^2}{|\mathrm{x}|^2}$
 
-6. 试构造二元函数$f(x,y)((x,y)\in\mathrm{R}^2)$,使得对$k=1,2,\cdots,K$,有$\lim_{x\to0}f(x,x^k)=0$,但$\lim_{(x,y)\to(0,0)}f(x,y)$不存在.
+III Chap13 17. 试构造二元函数$f(x,y)((x,y)\in\mathrm{R}^2)$,使得对$k=1,2,\cdots,K$,有$\lim_{x\to0}f(x,x^k)=0$,但$\lim_{(x,y)\to(0,0)}f(x,y)$不存在.
 
-7. 设函数$f(x,y)$在$\mathrm{R}^2$内除直线$x=a$与$y=b$外处处有定义,并且满足:
+III Chap13 18. 设函数$f(x,y)$在$\mathrm{R}^2$内除直线$x=a$与$y=b$外处处有定义,并且满足:
    . $\lim_{y\to b}f(x,y)=g(x)$存在
    . $\lim_{x\to a}f(x,y)=h(y)$一致存在, 即对于$\forall \varepsilon>0,\exists\delta>0,$使得对于$\forall (x,y)\in\{(x,y):0<|x-a|<\delta\}$有$|f(x,y)-h(y)|<\varepsilon$
 
@@ -36,20 +36,20 @@
 
 == 补充
 
-8. 证明$\mathrm{R}^n$中的闭集可表为可列个开集的交, 每个开集可表为可列个闭集的并.
+1. 证明$\mathrm{R}^n$中的闭集可表为可列个开集的交, 每个开集可表为可列个闭集的并.
 
-9. ($\mathrm{R}^n$的正规性)设$S_1,S_2$为$\mathrm{R}^n$中不相交的闭集(不一定有界). 证明存在开集$O_1,O_2$满足$S_i\subset O_i,i=1,2$,且$O_1\cap O_2=\emptyset$
+2. ($\mathrm{R}^n$的正规性)设$S_1,S_2$为$\mathrm{R}^n$中不相交的闭集(不一定有界). 证明存在开集$O_1,O_2$满足$S_i\subset O_i,i=1,2$,且$O_1\cap O_2=\emptyset$
 
-10. 设$f_1,\cdots,f_n$是$[0,1]$上的$n$个连续函数,称$f_1,\cdots,f_n$在$[0,1]$上是*线性相关*,若存在不全为零的常数$c_1,\cdots,c_n$,使得
+3. 设$f_1,\cdots,f_n$是$[0,1]$上的$n$个连续函数,称$f_1,\cdots,f_n$在$[0,1]$上是*线性相关*,若存在不全为零的常数$c_1,\cdots,c_n$,使得
 \(\sum_{i=1}^{n}c_if_i(x)\equiv0,x\in[0,1].\)
     证明:$f_1,\cdots,f_n$在$[0,1]$上线性相关的充要条件是
     \(\det\left((\int_0^1f_i(x)f_j(x)\mathrm{d}x)_{n\times n}\right)=0\)
 
-11. 
+4. 
 . 设$\mathcal{T}$是$\mathrm{R}^n$到$\mathrm{R}^n$的一个映射,如果存在常数$\theta\in(0,1)$以及自然数$n_0$使得\(|\mathcal{T}^{n_0}x-\mathcal{T}^{n_0}|\leq\theta|\mathrm{x}-\mathrm{y}|,\forall \mathrm{x},\mathrm{y}\in\mathrm{R}^n\)其中$\mathcal{T}^{n_0}$表示$\mathcal{T}$复合$n_0$次.证明: 映射$\mathcal{T}$有唯一的不动点,即,存在唯一的$\mathrm{x}_0\in\mathrm{R}^n$使得$\mathcal{T}\mathrm{x}_0=\mathrm{x}_0$
 . 设$\Omega$是$\mathrm{R}$中的有界闭集,$\mathrm{f}$是$\Omega$到$\Omega$的一个映射, 满足\(|f(\mathrm{x})-f(\mathrm{y})|<|\mathrm{x}-\mathrm{y}|,\forall \mathrm{x}\neq\mathrm{y}\in\Omega.\)证明:$f$在$\Omega$中存在唯一的不动点. 另外,能否把有界闭集的假设减弱为一般的有界集或无界闭集?
 
-12. 微分近似:对于在区间$[x-h,x+h]$上有$k$阶连续导数的函数$f$,利用
+5. 微分近似:对于在区间$[x-h,x+h]$上有$k$阶连续导数的函数$f$,利用
     - $f(x+h)=f(x)+hf'(x)+\cdots+\frac{h^k}{k!}f^{(k)}(\xi_1),$
     - $f(x-h)=f(x)-hf'(x)+\cdots+\frac{(-h)^k}{k!}f^{(k)}(\xi_2),$
 
@@ -59,7 +59,7 @@
     - $f'(x)=\frac{f(x+h)-f(x-h)}{2h}-\frac{1}{6}f'''(\xi_3),$
     - $f''(x)=\frac{f(x+h)-2f(x)+f(x-h)}{h^2}-\frac{1}{12}h^2f^{(4)}(\xi_4)$
 
-13. 积分近似:对于在区间$[a,b]$上的函数$f$,假设$f$有4阶连续导数,则
+6. 积分近似:对于在区间$[a,b]$上的函数$f$,假设$f$有4阶连续导数,则
     - 中点公式:$\int_a^bf(x)\mathrm{d}x-f(\frac{a+b}{2})=\frac{(b-a)^3}{24}f''(\xi_1),\xi_1\in(a,b)$
     - 梯形公式:$\int_a^bf(x)\mathrm{d}x-\frac{f(a)+f(b)}{2}(b-a)=-\frac{(b-a)^3}{12}f''(\xi_2),\xi_2\in(a,b)$
     - Simpson公式:$\int_a^bf(x)\mathrm{d}x-\frac{b-a}{6}[f(a)+4f(\frac{a+b}{2})+f(b)]=-\frac{(b-a)^5}{2880}f^{(4)}(\xi_3),\xi_3\in(a,b)$

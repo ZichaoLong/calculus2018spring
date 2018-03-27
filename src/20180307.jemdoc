@@ -8,20 +8,20 @@
 
 == 作业选讲
 
-22. 设函数 $f(x)\in C(-\infty,+\infty)$, 且 $f'(0)$ 存在, 再设对于
+II Chap7 22. 设函数 $f(x)\in C(-\infty,+\infty)$, 且 $f'(0)$ 存在, 再设对于
 $\forall x\in(-\infty,+\infty),\int_0^xf(t)\mathrm{d}t=\frac{1}{2}xf(x)$.
 证明: $f(x)\equiv cx$,其中$c\in\mathrm{R}$为常数.
 
-23. 设$P_n(x)$为$n\geq1$次多项式, $[a,b]$是任一闭区间. 证明:
+II Chap7 23. 设$P_n(x)$为$n\geq1$次多项式, $[a,b]$是任一闭区间. 证明:
 \(\int_a^b|P_n'(x)|\mathrm{d}x\leq2n\max_{a\leq x\leq b}\{|P_n(x)|\}\)
 
-25. 求下列极限:
+II Chap7 25. 求下列极限:
 \(
 (2)\lim_{x\to0+0}\frac{\int_0^x(\sin t)^\alpha\mathrm{d}t}{x^{1+\alpha}};
 (3)\lim_{x\to\infty}\frac{\int_0^xe^{t^\alpha}\mathrm{d}t}{x^{1-\alpha}e^{x^\alpha}}(\alpha>0).
 \)
 
-37. (Riemann定理, 作业37题加强版)设函数$f(x)$在区间$[a,b]$上可积, $g(x)$是$(-\infty,+\infty)$上以$T>0$为周期
+II Chap7 37. (Riemann定理, 作业37题加强版)设函数$f(x)$在区间$[a,b]$上可积, $g(x)$是$(-\infty,+\infty)$上以$T>0$为周期
 的连续函数, 且$\int_0^Tg(x)\mathrm{d}x=0$. 证明:
 \(
 \lim_{\lambda\to\infty}\int_a^bf(x)g(\lambda x)\mathrm{d}x=0

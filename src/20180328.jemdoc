@@ -1,0 +1,49 @@
+# jemdoc: menu{MENU}{index.html},nofooter
+= 2018-Mar-28
+
+== 作业
+III Chap13 18. 设函数$f(x,y)$在$\mathrm{R}^2$内除直线$x=a$与$y=b$外处处有定义,并且满足:
+   . $\lim_{y\to b}f(x,y)=g(x)$存在
+   . $\lim_{x\to a}f(x,y)=h(y)$一致存在, 即对于$\forall \varepsilon>0,\exists\delta>0,$
+   使得对于$\forall (x,y)\in\{(x,y):0<|x-a|<\delta\}$有$|f(x,y)-h(y)|<\varepsilon$
+
+   证明:存在$c\in\mathrm{R}$使得
+   . $\lim_{x\to a}\lim_{y\to b}f(x,y)=\lim_{x\to a}g(x)=c$
+   . $\lim_{y\to b}\lim_{x\to a}f(x,y)=\lim_{y\to b}h(y)=c$
+   . $\lim_{E\owns(x,y)\to(a,b)}f(x,y)=c$,其中$E=\mathrm{R}^2\setminus\{(x,y):x=a,or y=b\}$
+
+III Chap13 21. 设$E\subset\mathrm{R}^n$, 证明: 向量函数$\mathrm{f}(\mathrm{x}):E\to\mathrm{R}^m$
+在$\mathrm{x}_0\in E$处连续的充分必要条件是对任何在$U(\mathrm{f}(\mathrm{x}_0),\delta)(\delta>0)$
+内连续的函数$h(\mathrm{y}),h(\mathrm{f}(\mathrm{x}))$在$\mathrm{x}_0$处连续.
+
+III Chap14 15. 设函数$u=f(\mathrm{x})$在$\mathrm{x}_0\in\mathrm{R}^n(n\geq2)$的邻域
+$U(\mathrm{x}_0,\delta_0)$内存在$n$个偏导数, 且有$n-1$个偏导数在该邻域内连续. 
+证明: $u=f(\mathrm{x})$在$\mathrm{x}_0$处可微.
+
+== 补充
+
+1. 请举出一个函数$u=f(x)(x\in\mathrm{R}^n)$,使得它同时满足下述条件:
+    . $f(x)$在$x=0$处各个方向导数都存在.
+    . $f(x)$在$x=0$处各个偏导数都存在
+    . $f(x)$在$x=0$处连续但不可微.
+
+2. 请举出一个函数$u=f(x)(x\in\mathrm{R}^n)$,使得它同时满足下述条件:
+    . $f(x)$在$x=0$处可微
+    . $f(x)$在$x=0$邻域内各方向导数存在
+    . $f(x)$在$x=0$处偏导不连续
+
+3. 复合函数求导: $g:\mathrm{R}^l\to\mathrm{R}^m,f:\mathrm{R}^m\to\mathrm{R}^n$在合适的邻域内连续可微.
+记$u(x)=f(g(x))$, 则
+\(
+  \mathrm{d}u=Df\mathrm{d}g=DfDg\mathrm{d}x
+\)
+因此$Du(x)=Df(g)Dg(x)$, 即$\frac{\partial u}{\partial x}=\frac{\partial f}{\partial g}\cdot\frac{\partial g}{\partial x}$
+    . $u=f(\cdots f(f(x))\cdots)$, 其中$f:\mathrm{R}^n\to\mathrm{R}^n$. 
+    求$\frac{\partial u}{\partial x}$
+    . $u=x+f(x,\theta)$, 其中$\theta\in\mathrm{R}^N,f(\cdot,\theta):\mathrm{R}^n\to\mathrm{R}^n$.
+    求$\frac{\partial u}{\partial x},\frac{\partial u}{\partial \theta}$
+    . $u=x+f(x,\theta)+f(f(x,\theta),\theta)$,其中$\theta\in\mathrm{R}^N,f(\cdot,\theta):\mathrm{R}^n\to\mathrm{R}^n$
+    求$\frac{\partial u}{\partial x},\frac{\partial u}{\partial \theta}$
+
+[solutions/20180328/20180328.pdf solutions]
+

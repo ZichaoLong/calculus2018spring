@@ -21,14 +21,14 @@
 
 8. 曲面$z=\frac{x^2}{a^2}+\frac{y^2}{b^2}$与平面$z=h$所围成的立体的体积.
 
-9. 证明: 极坐标下曲线$r=r(\theta)$与$\theta=\alpha,\theta=\beta$(这里$0\leq\alpha<\beta\leq\pi$)所围成的平面图形绕极轴(即直线$\theta=0,\pi$)旋转一周所得立体的体积是
+II Chap7 48. 证明: 极坐标下曲线$r=r(\theta)$与$\theta=\alpha,\theta=\beta$(这里$0\leq\alpha<\beta\leq\pi$)所围成的平面图形绕极轴(即直线$\theta=0,\pi$)旋转一周所得立体的体积是
 \(
 V=\frac{2\pi}{3}\int_\alpha^\beta r^3(\theta)\sin\theta\mathrm{d}\theta
 \)
 侧面积呢?
 
-10. 求球体$x^2+y^2+z^2\leq1$和柱体$(x-\frac{1}{2})^2+y^2\leq \frac{1}{4}$公共部分的体积.
+II Chap7 46. 求球体$x^2+y^2+z^2\leq1$和柱体$(x-\frac{1}{2})^2+y^2\leq \frac{1}{4}$公共部分的体积.
 
-11. (第七章33(1))利用定积分第二中值定理证明: $|\int_a^b\frac{\sin x}{x}\mathrm{d}x|<\frac{2}{a}$, 其中$0<a<b$.注意说明等号为何不成立.
+II Chap7 33(1). 利用定积分第二中值定理证明: $|\int_a^b\frac{\sin x}{x}\mathrm{d}x|<\frac{2}{a}$, 其中$0<a<b$.注意说明等号为何不成立.
 
 [solutions/20180314/20180314.pdf solutions]
