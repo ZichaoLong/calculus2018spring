@@ -20,6 +20,9 @@ III Chap14 15. 设函数$u=f(\mathrm{x})$在$\mathrm{x}_0\in\mathrm{R}^n(n\geq2)
 $U(\mathrm{x}_0,\delta_0)$内存在$n$个偏导数, 且有$n-1$个偏导数在该邻域内连续. 
 证明: $u=f(\mathrm{x})$在$\mathrm{x}_0$处可微.
 
+III Chap14 8. 设函数$z=u(x,y)$在$\mathrm{R}^2\setminus\{(0,0)\}$内可微, 令$x=r\cos\theta,y=r\sin\theta$, 在$Oxy$平面上作单位向量$e_r,e_\theta$, 其中$e_r$表示$\theta$固定时沿$r$增加的方向, $e_\theta$表示$r$固定时沿$\theta$增加的方向. 证明:
+\(\frac{\partial u}{\partial e_r}=\frac{\partial u}{\partial r},\frac{\partial u}{\partial e_\theta}=\frac{1}{r}\frac{\partial u}{\partial \theta}\)
+
 == 补充
 
 1. 请举出一个函数$u=f(x)(x\in\mathrm{R}^n)$,使得它同时满足下述条件:

@@ -119,6 +119,47 @@ $U(\bm{x}_0,\delta_0)$内存在$n$个偏导数, 且有$n-1$个偏导数在该邻
 
   从而$f$在$\bm{x}_0$处是可微的.
 \end{proof}
+\noindent III Chap14 8. 设函数$z=u(x,y)$在$\mathrm{R}^2\setminus\{(0,0)\}$内可微, 令$x=r\cos\theta,y=r\sin\theta$, 在$Oxy$平面上作单位向量$e_{\bm{r}},e_{\bm{\theta}}$, 其中$e_{\bm{r}}$表示$\theta$固定时沿$r$增加的方向, $e_{\bm{\theta}}$表示$r$固定时沿$\theta$增加的方向. 证明:
+\[\frac{\partial u}{\partial e_{\bm{r}}}=\frac{\partial u}{\partial r},\frac{\partial u}{\partial e_{\bm{\theta}}}=\frac{1}{r}\frac{\partial u}{\partial \theta}\]
+\begin{proof}
+  $(x,y)=(r\cos\theta,r\sin\theta)$, 因此
+  \[
+    \left\{
+    \begin{array}{l}
+    \ud x=\cos\theta\ud r-r\sin\theta\ud\theta,\\
+    \ud y=\sin\theta\ud r+r\sin\theta\ud\theta
+    \end{array}
+    \right.\Rightarrow
+    \left\{
+      \begin{array}{l}
+        \ud\theta=-\frac{\sin\theta}{r}\ud x+\frac{\cos\theta}{r}\ud y\\
+        \ud r=\cos\theta\ud x+\sin\theta\ud y
+      \end{array}
+      \right.
+  \]
+\[\Rightarrow\left\{
+  \begin{array}{l}
+    \frac{\partial u}{\partial x}=-\frac{\sin\theta}{r}\frac{\partial u}{\partial \theta}+\cos\theta\frac{\partial u}{\partial r}\\
+    \frac{\partial u}{\partial y}=\frac{\cos\theta}{r}\frac{\partial u}{\partial \theta}+\sin\theta\frac{\partial u}{\partial r}
+  \end{array}\right.
+    \]
+    由于$e_{\bm{r}}=\frac{1}{r}(x,y),e_{\bm{\theta}}=\frac{1}{r}(-y,x)$, 利用上式对这两个方向求方向导数得:
+  \[\Rightarrow\left\{
+    \begin{array}{l}
+      \frac{\partial u}{\partial e_{\bm{r}}}=(\frac{\partial u}{\partial x},\frac{\partial u}{\partial y})\cdot e_{\bm{r}}=\frac{\partial u}{\partial r}\\
+      \frac{\partial u}{\partial e_{\bm{\theta}}}=(\frac{\partial u}{\partial x},\frac{\partial u}{\partial y})\cdot e_{\bm{\theta}}=\frac{1}{r}\frac{\partial u}{\partial \theta}
+    \end{array}
+    \right.
+    \]
+\end{proof}
+\begin{proof}[讨论]
+  对函数$f:\mr^n\to\mr$,及方向$\bm{v}$(不一定是单位向量),沿$\bm{v}$方向取微分/微元
+  \[\ud f=\frac{\partial f}{\partial\bm{v}}\cdot[\bm{v}\cdot(\ud x_1,\cdots,\ud x_n)^\top]\]
+  对函数$u=u(x_1,\cdots,x_n)$, $\frac{\partial u}{\partial \bm{x}}$在每个点局部定义了一个方向, 且沿此方向取微分/微元
+  \[\ud f=\frac{\partial f}{\partial u}\cdot[\frac{\partial u}{\partial \bm{x}}\cdot(\ud x_1,\cdots,\ud x_n)^\top]\]
+  因此, 若在某一点$\bm{v},\frac{\partial u}{\partial\bm{x}}$是同向的, 设$\bm{v}=\alpha\frac{\partial u}{\partial\bm{x}}$,则在这一点
+  \[\frac{\partial f}{\partial\bm{v}}=\frac{1}{\alpha}\frac{\partial f}{\partial u}\]
+\end{proof}
 
 \subsection*{补充}
 \noindent 1. 请举出一个函数$u=f(\bm{x})(\bm{x}\in\mathrm{R}^n)$,使得它同时满足下述条件:
