@@ -1,0 +1,25 @@
+# jemdoc: menu{MENU}{index.html},nofooter
+= 2018-Apr-04
+
+== 多元微分学
+
+延续上周补充题第3题
+
+复合函数求导: $g:\mathrm{R}^l\to\mathrm{R}^m,f:\mathrm{R}^m\to\mathrm{R}^n$在合适的邻域内连续可微.
+记$u(x)=f(g(x))$, 则
+\(
+  \mathrm{d}u=Df\mathrm{d}g=DfDg\mathrm{d}x
+\)
+因此$Du(x)=Df(g)Dg(x)$, 即$\frac{\partial u}{\partial x}=\frac{\partial f}{\partial g}\cdot\frac{\partial g}{\partial x}$
+
+1. 对于一元连续可微函数$f:[a,b]\to[c,d]$, $f'$在$[a,b]$上大于0. 假设$f$有反函数$f^{-1}[c,d]\to[a,b]$. 则$f^{-1}$可微, 且$f^{-1'}(y)=\frac{1}{f(x)},\forall y\in[c,d]$, 其中$x\in[a,b]$是满足$f(x)=y$的唯一$x$.
+
+2.
+    . $u=f(\cdots f(f(x))\cdots)$, 其中$f:\mathrm{R}^n\to\mathrm{R}^n$. 
+    求$\frac{\partial u}{\partial x}$
+    . $u=x+f(x,\theta)$, 其中$\theta\in\mathrm{R}^N,f(\cdot,\theta):\mathrm{R}^n\to\mathrm{R}^n$.
+    求$\frac{\partial u}{\partial x},\frac{\partial u}{\partial \theta}$
+    . $u=x+f(x,\theta)+f(f(x,\theta),\theta)$,其中$\theta\in\mathrm{R}^N,f(\cdot,\theta):\mathrm{R}^n\to\mathrm{R}^n$
+    求$\frac{\partial u}{\partial x},\frac{\partial u}{\partial \theta}$
+
+
